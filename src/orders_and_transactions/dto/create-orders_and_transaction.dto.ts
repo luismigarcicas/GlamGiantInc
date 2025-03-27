@@ -1,4 +1,4 @@
-import { IsAlphanumeric, IsArray, IsNumber, IsUUID, IsEnum} from "class-validator";
+inedimport { IsAlphanumeric, IsArray, IsNumber, IsUUID, IsEnum} from "class-validator";
 
 export class CreateOrdersAndTransactionDto {
     @IsUUID()
