@@ -16,16 +16,16 @@ export class User {
   password: string;
 
   @Column({ type: 'enum', enum: ['Admin', 'Client', 'Tester', 'Employee'] })
-  role: string; // ✅ Rol del usuario
+  role: string; 
 
   @Column({ default: false })
-  test_subject_status: boolean; // ✅ Si el usuario es sujeto de prueba
+  test_subject_status: boolean; 
 
   @Column('text', { nullable: true })
-  allergic_reactions: string; // ✅ Posibles alergias
+  allergic_reactions: string; 
 
   @Column('simple-array', { nullable: true })
-  purchase_history: string[]; // ✅ Historial de compras (IDs de órdenes)
+  purchase_history: string[]; 
 
   
 }

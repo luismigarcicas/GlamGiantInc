@@ -8,11 +8,11 @@ export class ProductTest {
   id: string;
 
   @ManyToOne(() => User, { eager: true, onDelete: 'CASCADE' })
-  @JoinColumn({ name: 'tester_id' }) // ✅ Se llamará tester_id en la BD
+  @JoinColumn({ name: 'tester_id' }) 
   tester: User;
 
   @ManyToOne(() => MakeupProduct, { eager: true, onDelete: 'CASCADE' })
-  @JoinColumn({ name: 'product_id' }) // ✅ Se llamará product_id en la BD
+  @JoinColumn({ name: 'product_id' }) 
   product: MakeupProduct;
 
   @Column({ type: 'text', nullable: true })
