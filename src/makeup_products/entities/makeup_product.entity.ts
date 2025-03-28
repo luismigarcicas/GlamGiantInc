@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-import { ProductTest } from '../../product_tests/entities/product_test.entity';
+
 
 @Entity()
 export class MakeupProduct {
