@@ -1,11 +1,11 @@
-inedimport { IsAlphanumeric, IsArray, IsNumber, IsUUID, IsEnum} from "class-validator";
+import { IsAlphanumeric, IsArray, IsNumber, IsUUID, IsEnum} from "class-validator";
 
 export class CreateOrdersAndTransactionDto {
     @IsUUID()
     client_id: string;
 
     @IsArray()
-    @IsUUID("4", {each: true}) //cada elemento debe ser uuid
+    @IsUUID("all", {each: true}) //cada elemento debe ser uuid
     products: string[];
 
     @IsNumber()
