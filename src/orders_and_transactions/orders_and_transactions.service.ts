@@ -11,7 +11,7 @@ export class OrdersAndTransactionsService {
   constructor(
     @InjectRepository(OrdersAndTransaction)
     private readonly ordersRepository: Repository<OrdersAndTransaction>,
-    private readonly usersService: UsersService, // ✅ Conectar con Users
+    private readonly usersService: UsersService, 
   ) {}
 
   async create(dto: CreateOrdersAndTransactionDto): Promise<OrdersAndTransaction> {

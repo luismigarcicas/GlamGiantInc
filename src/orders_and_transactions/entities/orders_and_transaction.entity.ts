@@ -6,11 +6,11 @@ export class OrdersAndTransaction {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @ManyToOne(() => User, { eager: true, onDelete: 'CASCADE' }) // ✅ Relación con Users
-  @JoinColumn({ name: 'client_id' }) // ✅ Se guarda en la base de datos como 'client_id'
+  @ManyToOne(() => User, { eager: true, onDelete: 'CASCADE' }) 
+  @JoinColumn({ name: 'client_id' }) 
   client: User;
 
-  @Column("simple-array") // ✅ Guarda los productos como un array de UUIDs
+  @Column("simple-array")
   products: string[];
 
   @Column({ type: 'decimal', precision: 10, scale: 2 })
