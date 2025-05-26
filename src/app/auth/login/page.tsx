@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import './login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -10,33 +11,33 @@ const Login = () => {
     const res = await fetch('http://localhost:3001/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
+      body: JSON.stringify({ email, password }),
     });
     const data = await res.json();
-    alert(data.message || 'Sesión iniciada');
+    alert(data.message || 'Login successful');
   };
 
   return (
-    <div className="main">
-      <h1>Iniciar sesión</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Correo:</label>
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h1 className="login-title">Welcome!</h1>
         <input
           type="email"
-          id="email"
+          placeholder="Email"
           value={email}
           required
           onChange={(e) => setEmail(e.target.value)}
+          className="login-input"
         />
-        <label htmlFor="password">Contraseña:</label>
         <input
           type="password"
-          id="password"
+          placeholder="Password"
           value={password}
           required
           onChange={(e) => setPassword(e.target.value)}
+          className="login-input"
         />
-        <button type="submit">Ingresar</button>
+        <button type="submit" className="login-button">Log In</button>
       </form>
     </div>
   );
