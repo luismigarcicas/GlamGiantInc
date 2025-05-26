@@ -1,0 +1,13 @@
+.orden-card {
+  background-color: #faf0e6;
+  border: 1px solid #9b4d96;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.orden-card p {
+  margin: 0.3rem 0;
+  color: #6b0d36;
+}

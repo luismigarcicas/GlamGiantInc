@@ -1,26 +1,107 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* globals.css */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5dc; /* Fondo color crema para la página */
+}
+
+/* Estilo del header */
+header {
+  background-color: #8e0e26; /* Magenta oscuro con un matiz rojo para el header */
+  padding: 2rem 0; /* Espacio más grande en el header */
+  width: 100%;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f5f5dc; /* Fondo crema para las secciones */
+  color: #9b4d96; /* Texto magenta */
+}
+
+/* Barra de navegación */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 5rem; /* Más separación entre las secciones */
+  font-size: 2rem; /* Aumenta aún más el tamaño de las secciones */
+}
+
+/* Enlaces del header */
+.nav a {
+  color: #f5f5dc; /* Letra color crema */
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 0.5rem 1rem; /* Aumentar padding para mayor tamaño */
+  transition: color 0.3s ease; /* Transición de color para el hover */
+  overflow: hidden; /* Para que el contenedor no sobresalga del área del enlace */
+}
+
+/* Línea vertical doradas al lado */
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: gold; /* Color dorado */
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 4px;
+  height: 80%;
+  background-color: gold;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+/* Línea horizontal dorada debajo del enlace */
+.nav a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Coloca la línea un poco más abajo */
+  width: 100%;
+  height: 4px;
+  background-color: gold;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+/* Expandir las líneas vertical y la horizontal en hover */
+.nav a:hover::after {
+  transform: scaleY(1);
+}
+
+.nav a:hover::before {
+  transform: scaleY(1);
+}
+
+/* Expandir la línea horizontal en hover */
+.nav a:hover::before {
+  transform: scaleX(1);
+}
+
+/* Cambio de color de las letras en hover */
+.nav a:hover {
+  color: gray; /* Las letras se vuelven grises */
+}
+
+/* Estilo del footer */
+footer {
+  background-color: #8e0e26; /* Mismo color del header (magenta oscuro con matiz rojo) */
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
