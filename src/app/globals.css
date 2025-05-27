@@ -5,12 +5,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f5f5dc; /* Fondo color crema para la página */
+  background-color: #FFDDEE; /* Fondo color crema para la página */
 }
 
 /* Estilo del header */
 header {
-  background-color: #8e0e26; /* Magenta oscuro con un matiz rojo para el header */
+  background-color: #d77ead;
   padding: 2rem 0; /* Espacio más grande en el header */
   width: 100%;
 }
@@ -18,7 +18,7 @@ header {
 .main {
   flex: 1;
   padding: 2rem;
-  background-color: #f5f5dc; /* Fondo crema para las secciones */
+  background-color: 	#FFDDEE;
   color: #9b4d96; /* Texto magenta */
 }
 
@@ -95,12 +95,12 @@ header {
 
 /* Cambio de color de las letras en hover */
 .nav a:hover {
-  color: gray; /* Las letras se vuelven grises */
+  color: 	#AD1457;
 }
 
 /* Estilo del footer */
 footer {
-  background-color: #8e0e26; /* Mismo color del header (magenta oscuro con matiz rojo) */
+  background-color: #d77ead; 
   color: white;
   text-align: center;
   padding: 1rem;

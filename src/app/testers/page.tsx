@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import './testers.css';
 
 const Testers = () => {
   const [tests, setTests] = useState([]);
@@ -11,18 +12,22 @@ const Testers = () => {
   }, []);
 
   return (
-    <div className="main">
-      <h1>Tester results</h1>
-      <ul>
+    <div className="testers-container">
+      <h1 className="testers-title">Clinical Tester Reports</h1>
+      <div className="testers-list">
         {tests.map((test: any) => (
-          <li key={test.id}>
-            Tester: {test.tester?.name} <br />
-            Product: {test.product?.name} <br />
-            Reaction: {test.reaction} <br />
-            Survived: {test.survival_status ? 'Sí' : 'No'}
-          </li>
+          <div className="test-card" key={test.id}>
+            <div className="test-header">
+              💋 {test.product?.name}
+            </div>
+            <div className="test-body">
+              <p><span>Tester:</span> {test.tester?.name}</p>
+              <p><span>Reaction:</span> {test.reaction}</p>
+              <p><span>Survived:</span> {test.survival_status ? '✅ Yes' : '❌ No'}</p>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

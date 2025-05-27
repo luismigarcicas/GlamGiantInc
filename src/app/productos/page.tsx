@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import './products.css';
 
 const Productos = () => {
   const [productos, setProductos] = useState([]);
@@ -11,15 +12,21 @@ const Productos = () => {
   }, []);
 
   return (
-    <div className="main">
-      <h1>Products</h1>
-      <ul>
+    <div className="productos-container">
+      <h1 className="productos-title">Our Products</h1>
+      <div className="productos-grid">
         {productos.map((producto: any) => (
-          <li key={producto.id}>
-            <strong>{producto.name}</strong> ({producto.category}) - Stock: {producto.stock}
-          </li>
+          <div className="producto-card" key={producto.id}>
+            <div className="producto-header">
+              {producto.name}
+            </div>
+            <div className="producto-body">
+              <p><span>Category:</span> {producto.category}</p>
+              <p><span>Stock:</span> {producto.stock}</p>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

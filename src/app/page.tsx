@@ -1,16 +1,21 @@
-// src/app/page.tsx
 'use client';
+import './HomeStyle/Home.css';
 
 export default function HomePage() {
   return (
-    <div className="main">
-      <h1>GlamGiant Inc.</h1>
-      <p><strong>Small in size, but our glamour makes up for it</strong></p>
-      <p>
-        Welcome to the empire of indestructible makeup. Our company leads the market with products so resilient they defy physics.
+    <div className="home-background-full">
+      <h1 className="glam-logo">
+        ✨ GlamGiant Inc. 💄
+      </h1>
+      <p className="glam-slogan">
+        Small in size, but our glamour makes up for it
       </p>
-      <p>
-        Here you can browse our products, explore our (questionably) scientific tests, meet our most glamorous clients, and review your past orders.
+      <hr className="glam-divider" />
+      <p className="glam-text">
+        Welcome to the empire of indestructible makeup. Our products defy gravity, judgment, and time itself. 
+      </p>
+      <p className="glam-text">
+        Browse our latest collections, witness scientific madness, and discover the elite behind the empire.
       </p>
     </div>
   );

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.home-background-full {
+  background: linear-gradient(to bottom right, #fff7f9, #ffeaf3, #fff6f1); /* tonos pastel rosado suave */
+  min-height: 100vh;
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glam-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  background: linear-gradient(90deg, #b7557d, #9c3e60); /* colores de acento de tu paleta */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.3rem;
+  text-shadow: 1px 1px 5px rgba(197, 97, 132, 0.3); /* sombra en rosado suave */
+}
+
+.glam-slogan {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #a75d75; /* color de textos secundarios en tu estilo */
+  font-weight: 500;
+  margin-bottom: 2rem;
+  margin-top: -0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.glam-divider {
+  width: 80px;
+  height: 4px;
+  background: #f4aac1; /* misma línea vertical de títulos */
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  border: none;
+}
+
+.glam-text {
+  font-size: 2rem;
+  color: #653c48; /* igual que cuerpo de texto en producto y testers */
+  max-width: 800px;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,77 @@
+.orders-container {
+  padding: 3rem;
+  background-color: #fff7f9; /* fondo pastel rosado suave */
+  min-height: 100vh;
+}
+
+.orders-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #b7557d; /* mismo tono de título */
+  margin-bottom: 2rem;
+  text-align: left;
+  border-left: 5px solid #f4aac1; /* línea vertical */
+  padding-left: 1rem;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fffafc; /* igual a otras tarjetas */
+  border: 1px solid #f6c5d5; /* rosado claro */
+  border-radius: 0.75rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 3px 8px rgba(197, 97, 132, 0.05); /* sombra suave rosada */
+  transition: transform 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(197, 97, 132, 0.08); /* sombra más intensa */
+}
+
+.client-info {
+  flex: 1;
+}
+
+.client-info h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  color: #9c3e60; /* como headers anteriores */
+}
+
+.client-info p {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  color: #653c48; /* como textos de cuerpo */
+}
+
+.order-id-box {
+  text-align: center;
+  background-color: #fde9ef; /* rosado pálido */
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  min-width: 180px;
+}
+
+.order-id-box span {
+  font-size: 0.75rem;
+  color: #a75d75; /* mismo tono para textos secundarios */
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.order-id {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #9c3e60; /* igual que títulos secundarios */
+  word-break: break-all;
+}
