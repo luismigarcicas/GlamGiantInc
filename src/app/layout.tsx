@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body>
         <header className="header">
           <nav className="nav">
@@ -23,7 +23,6 @@ export default function RootLayout({
             <Link href="/testers">Testers</Link>
             <Link href="/clientes">Clients</Link>
             <Link href="/ordenes">Orders</Link>
-            <Link href="/auth/login">Login</Link>
           </nav>
         </header>
 
